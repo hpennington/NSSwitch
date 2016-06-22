@@ -104,6 +104,7 @@ public class MOSwitch: NSControl {
     
     @objc private func clicked(click: NSClickGestureRecognizer) {
         setOn(!on, animated: true)
+        sendAction(self.action, to: self.target)
     }
     
     @objc private func panned(pan: NSPanGestureRecognizer) {
@@ -123,6 +124,7 @@ public class MOSwitch: NSControl {
             }
             break
         case .Ended:
+            sendAction(self.action, to: self.target)
             moveToNearestSwitchPosition()
             break
         default:
