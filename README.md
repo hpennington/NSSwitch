@@ -10,6 +10,9 @@ A UISwitch clone for macOS.
 ## Image
 ![](./screen_shot.png)
 
+## Disclamer
+MOSwitch is in early development and is subject to change without notice.
+
 ## Installation
 
 MOSwitch is available through [CocoaPods](http://cocoapods.org). To install
