@@ -1,0 +1,6 @@
+framework module Pods_MOSwitch_Tests {
+  umbrella header "Pods-MOSwitch_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
