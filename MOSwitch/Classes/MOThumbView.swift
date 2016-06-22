@@ -14,7 +14,7 @@ public class MOThumbView: NSView {
     
     public var lineColor = NSColor.blackColor()
 
-    override func drawRect(dirtyRect: NSRect) {
+    override public func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
         
         let center = NSPoint(x: bounds.size.height/2, y: bounds.size.height/2)
