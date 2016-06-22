@@ -8,12 +8,15 @@
 
 import Cocoa
 
+/// The 'thumb' component of an `MOSwitch`.
 public class MOThumbView: NSView {
     
+    /// Specifies the width of the detail line drawn along the edge of the `MOThumbView`.
     public var lineWidth: CGFloat = 0.125
     
+    // Specifies the color of the detail line drawn along the edge of the `MOThumbView`.
     public var lineColor = NSColor.blackColor()
-
+    
     override public func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
         
