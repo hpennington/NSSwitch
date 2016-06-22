@@ -50,12 +50,12 @@ public class MOSwitch: NSControl {
     
     public var dragVelocityGain: CGFloat = 0.3
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
     
-    override init(frame frameRect: NSRect) {
+    public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         setup()
     }
