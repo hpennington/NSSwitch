@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MOSwitch'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A UISwitch clone for macOS.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.osx.deployment_target = '10.10'
 
   s.source_files = 'MOSwitch/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'MOSwitch' => ['MOSwitch/Assets/*.png']
   # }
