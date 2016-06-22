@@ -1,15 +1,14 @@
 # MOSwitch
 
+A UISwitch clone for macOS.
+
 [![CI Status](http://img.shields.io/travis/Hayden Pennington/MOSwitch.svg?style=flat)](https://travis-ci.org/Hayden Pennington/MOSwitch)
 [![Version](https://img.shields.io/cocoapods/v/MOSwitch.svg?style=flat)](http://cocoapods.org/pods/MOSwitch)
 [![License](https://img.shields.io/cocoapods/l/MOSwitch.svg?style=flat)](http://cocoapods.org/pods/MOSwitch)
 [![Platform](https://img.shields.io/cocoapods/p/MOSwitch.svg?style=flat)](http://cocoapods.org/pods/MOSwitch)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+## Image
+![](./screen_shot.png)
 
 ## Installation
 
