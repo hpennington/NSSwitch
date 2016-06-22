@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MOSwitch'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A UISwitch clone for macOS.'
 
 # This description is used to generate tags and improve search results.
