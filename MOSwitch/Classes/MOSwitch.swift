@@ -10,11 +10,11 @@ import Cocoa
 
 
 @IBDesignable
-class MOSwitch: NSControl {
+public class MOSwitch: NSControl {
     
-    var on = false
+    public var on = false
     
-    func setOn(on: Bool, animated: Bool) {
+    public func setOn(on: Bool, animated: Bool) {
         
         let bgColor = on ? onColor : offColor
         backgroundView.layer?.backgroundColor = bgColor.CGColor
@@ -26,29 +26,29 @@ class MOSwitch: NSControl {
         self.on = on
     }
     
-    let thumbPadding: CGFloat = 0.0
+    public let thumbPadding: CGFloat = 0.0
     
-    var mediaTimingFunction = kCAMediaTimingFunctionEaseIn
-    var thumbAnimationDuration = 0.20
+    public var mediaTimingFunction = kCAMediaTimingFunctionEaseIn
+    public var thumbAnimationDuration = 0.20
     
-    var radius: CGFloat {
+    public var radius: CGFloat {
         return self.bounds.size.height / 2
     }
     
-    @IBInspectable var onColor: NSColor = NSColor(red: 19/255.0, green: 232/255.0, blue: 89/255.0, alpha: 1.0)
+    @IBInspectable public var onColor: NSColor = NSColor(red: 19/255.0, green: 232/255.0, blue: 89/255.0, alpha: 1.0)
     
-    @IBInspectable var offColor: NSColor = NSColor(red: 203/255.0, green: 203/255.0, blue: 203/255.0, alpha: 1.0) {
+    @IBInspectable public var offColor: NSColor = NSColor(red: 203/255.0, green: 203/255.0, blue: 203/255.0, alpha: 1.0) {
         didSet { backgroundView.layer?.backgroundColor = offColor.CGColor }
     }
     
-    @IBInspectable var thumbColor: NSColor = NSColor(red: 226/255.0, green: 226/255.0, blue: 226/255.0, alpha: 1.0) {
+    @IBInspectable public var thumbColor: NSColor = NSColor(red: 226/255.0, green: 226/255.0, blue: 226/255.0, alpha: 1.0) {
         didSet { thumbView.layer?.backgroundColor = thumbColor.CGColor }
     }
     
-    var backgroundView: NSView!
-    var thumbView: MOThumbView!
+    public var backgroundView: NSView!
+    public var thumbView: MOThumbView!
     
-    var dragVelocityGain: CGFloat = 0.3
+    public var dragVelocityGain: CGFloat = 0.3
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

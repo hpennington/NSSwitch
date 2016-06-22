@@ -8,11 +8,11 @@
 
 import Cocoa
 
-class MOThumbView: NSView {
+public class MOThumbView: NSView {
     
-    var lineWidth: CGFloat = 0.125
+    public var lineWidth: CGFloat = 0.125
     
-    var lineColor = NSColor.blackColor()
+    public var lineColor = NSColor.blackColor()
 
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
