@@ -81,7 +81,7 @@ class MOSwitch: NSControl {
         let thumbSize = CGSize(width: diameter, height: diameter)
         let thumbFrame = CGRect(origin: thumbOrigin, size: thumbSize)
         
-        thumbView = ThumbView(frame: thumbFrame)
+        thumbView = MOThumbView(frame: thumbFrame)
         thumbView.wantsLayer = true
         
         if let layer = thumbView.layer {
@@ -89,8 +89,8 @@ class MOSwitch: NSControl {
             layer.cornerRadius = radius
         }
                 
-        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(Switch.panned(_:)))
-        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(Switch.clicked(_:)))
+        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(MOSwitch.panned(_:)))
+        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(MOSwitch.clicked(_:)))
         
         thumbView.addGestureRecognizer(panRecognizer)
         backgroundView.addGestureRecognizer(clickRecognizer)
