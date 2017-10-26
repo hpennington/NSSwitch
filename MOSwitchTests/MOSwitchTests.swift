@@ -1,8 +1,15 @@
-import UIKit
-import XCTest
-import MOSwitch
+//
+//  MOSwitchTests.swift
+//  MOSwitchTests
+//
+//  Created by Hayden Pennington on 10/26/17.
+//  Copyright © 2017 Hayden Pennington. All rights reserved.
+//
 
-class Tests: XCTestCase {
+import XCTest
+@testable import MOSwitch
+
+class MOSwitchTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -16,12 +23,12 @@ class Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

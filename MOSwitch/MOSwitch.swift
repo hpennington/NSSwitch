@@ -23,10 +23,10 @@ public class MOSwitch: NSControl {
     public func setOn(on: Bool, animated: Bool) {
         
         let bgColor = on ? onColor : offColor
-        backgroundView.layer?.backgroundColor = bgColor.CGColor
+        backgroundView.layer?.backgroundColor = bgColor.cgColor
 
         if animated {
-            animate(on)
+            animate(on: on)
         }
         
         self.on = on
@@ -44,12 +44,12 @@ public class MOSwitch: NSControl {
     
     /// The `NSColor` value of the `backgroundView` when the property `on` is set to false.
     @IBInspectable public var offColor: NSColor = NSColor(red: 203/255.0, green: 203/255.0, blue: 203/255.0, alpha: 1.0) {
-        didSet { backgroundView.layer?.backgroundColor = offColor.CGColor }
+        didSet { backgroundView.layer?.backgroundColor = offColor.cgColor }
     }
     
     /// The `NSColor` value of the `thumbView`.
     @IBInspectable public var thumbColor: NSColor = NSColor(red: 226/255.0, green: 226/255.0, blue: 226/255.0, alpha: 1.0) {
-        didSet { thumbView.layer?.backgroundColor = thumbColor.CGColor }
+        didSet { thumbView.layer?.backgroundColor = thumbColor.cgColor }
     }
     
     /// The background `NSView` of the `MOSwitch`.
@@ -81,7 +81,7 @@ public class MOSwitch: NSControl {
         backgroundView.wantsLayer = true
 
         if let layer = backgroundView.layer {
-            layer.backgroundColor = offColor.CGColor
+            layer.backgroundColor = offColor.cgColor
             layer.cornerRadius = radius
         }
         
@@ -99,7 +99,7 @@ public class MOSwitch: NSControl {
         thumbView.wantsLayer = true
         
         if let layer = thumbView.layer {
-            layer.backgroundColor = thumbColor.CGColor
+            layer.backgroundColor = thumbColor.cgColor
             layer.cornerRadius = radius
         }
                 
@@ -117,27 +117,27 @@ public class MOSwitch: NSControl {
     // MARK: - NSGesture handlers.
     
     @objc private func clicked(click: NSClickGestureRecognizer) {
-        setOn(!on, animated: true)
+        setOn(on: !on, animated: true)
         sendAction(self.action, to: self.target)
     }
     
     @objc private func panned(pan: NSPanGestureRecognizer) {
         switch pan.state {
-        case .Began:
+        case .began:
             break
-        case .Changed:
-            updatePosition(pan)
+        case .changed:
+            updatePosition(pan: pan)
             
             let x = thumbView.frame.origin.x
             let thumbViewWidth = thumbView.bounds.size.width
             let backgroundViewWidth = backgroundView.bounds.size.width
             if x + thumbViewWidth/2 >= backgroundViewWidth/2 {
-                setOn(true, animated: false)
+                setOn(on: true, animated: false)
             } else {
-                setOn(false, animated: false)
+                setOn(on: false, animated: false)
             }
             break
-        case .Ended:
+        case .ended:
             sendAction(self.action, to: self.target)
             moveToNearestSwitchPosition()
             break
@@ -171,7 +171,7 @@ public class MOSwitch: NSControl {
         let leadingSpace = thumbView.frame.origin.x
         let trailingSpace = backgroundView.bounds.size.width - (leadingSpace + thumbWidth)
         
-        let xTranslation = pan.translationInView(backgroundView).x
+        let xTranslation = pan.translation(in: backgroundView).x
         
         if xTranslation >= 0 {
             
@@ -192,7 +192,7 @@ public class MOSwitch: NSControl {
     }
     
     private func moveToNearestSwitchPosition() {
-            setOn(on, animated: true)
+        setOn(on: on, animated: true)
     }
     
 }
