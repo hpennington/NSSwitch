@@ -1,19 +1,14 @@
 //
-//  MOSwitch.swift
-//  MOSwitch
-//
-//  Created by Hayden Pennington on 6/14/16.
-//  Copyright © 2016 Hayden Pennington. All rights reserved.
+// NSSwitch.swift
 //
 
 import Cocoa
 
-
 @IBDesignable
 /// A UISWitch "clone" for macOS.
-public class MOSwitch: NSControl {
+public class NSSwitch: NSControl {
     
-    /// Reflects the current state of the `MOSwitch`.
+    /// Reflects the current state of the `NSSwitch`.
     private (set) public var on = false
     
     /// Set the `on` property, optionally animate the change.
@@ -52,11 +47,11 @@ public class MOSwitch: NSControl {
         didSet { thumbView.layer?.backgroundColor = thumbColor.cgColor }
     }
     
-    /// The background `NSView` of the `MOSwitch`.
+    /// The background `NSView` of the `NSSwitch`.
     public var backgroundView: NSView!
     
     /// An instance of `MOThumbView` for the Thumb component.
-    public var thumbView: MOThumbView!
+    public var thumbView: NSSwitchThumbView!
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -95,7 +90,7 @@ public class MOSwitch: NSControl {
         let thumbSize = CGSize(width: diameter, height: diameter)
         let thumbFrame = CGRect(origin: thumbOrigin, size: thumbSize)
         
-        thumbView = MOThumbView(frame: thumbFrame)
+        thumbView = NSSwitchThumbView(frame: thumbFrame)
         thumbView.wantsLayer = true
         
         if let layer = thumbView.layer {
@@ -103,8 +98,8 @@ public class MOSwitch: NSControl {
             layer.cornerRadius = radius
         }
                 
-        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(MOSwitch.panned(_:)))
-        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(MOSwitch.clicked(_:)))
+        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(NSSwitch.panned(pan:)))
+        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(NSSwitch.clicked(click:)))
         
         thumbView.addGestureRecognizer(panRecognizer)
         backgroundView.addGestureRecognizer(clickRecognizer)

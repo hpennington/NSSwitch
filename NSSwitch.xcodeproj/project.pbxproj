@@ -7,34 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8A1480E1FA2809D0099271B /* MOSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A148041FA2809D0099271B /* MOSwitch.framework */; };
-		F8A148131FA2809D0099271B /* MOSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A148121FA2809D0099271B /* MOSwitchTests.swift */; };
-		F8A148151FA2809D0099271B /* MOSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A148071FA2809D0099271B /* MOSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A148251FA281C50099271B /* MOSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A148231FA281BD0099271B /* MOSwitch.swift */; };
-		F8A148261FA281C80099271B /* MOThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A148241FA281BD0099271B /* MOThumbView.swift */; };
+		F8A148251FA281C50099271B /* NSSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A148231FA281BD0099271B /* NSSwitch.swift */; };
+		F8A148261FA281C80099271B /* NSSwitchThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A148241FA281BD0099271B /* NSSwitchThumbView.swift */; };
+		F8FE2DBF1FA2C8C7004F4E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2DBE1FA2C8C7004F4E5C /* AppDelegate.swift */; };
+		F8FE2DC11FA2C8C7004F4E5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2DC01FA2C8C7004F4E5C /* ViewController.swift */; };
+		F8FE2DC31FA2C8C7004F4E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8FE2DC21FA2C8C7004F4E5C /* Assets.xcassets */; };
+		F8FE2DC61FA2C8C7004F4E5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8FE2DC41FA2C8C7004F4E5C /* Main.storyboard */; };
+		F8FE2DCF1FA2CC19004F4E5C /* NSSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A148041FA2809D0099271B /* NSSwitch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F8A1480F1FA2809D0099271B /* PBXContainerItemProxy */ = {
+		F8FE2DCC1FA2C8DF004F4E5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8A147FB1FA2809D0099271B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F8A148031FA2809D0099271B;
-			remoteInfo = MOSwitch;
+			remoteInfo = NSSwitch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F8A148041FA2809D0099271B /* MOSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MOSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A148071FA2809D0099271B /* MOSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOSwitch.h; sourceTree = "<group>"; };
-		F8A148081FA2809D0099271B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A1480D1FA2809D0099271B /* MOSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A148121FA2809D0099271B /* MOSwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOSwitchTests.swift; sourceTree = "<group>"; };
-		F8A148141FA2809D0099271B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8A148041FA2809D0099271B /* NSSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1481E1FA2816C0099271B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F8A1481F1FA2816C0099271B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F8A148231FA281BD0099271B /* MOSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOSwitch.swift; sourceTree = "<group>"; };
-		F8A148241FA281BD0099271B /* MOThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOThumbView.swift; sourceTree = "<group>"; };
+		F8A148231FA281BD0099271B /* NSSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSwitch.swift; sourceTree = "<group>"; };
+		F8A148241FA281BD0099271B /* NSSwitchThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSwitchThumbView.swift; sourceTree = "<group>"; };
+		F8FE2DB11FA28BFE004F4E5C /* NSSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSwitch.h; sourceTree = "<group>"; };
+		F8FE2DB21FA28C26004F4E5C /* NSSwitchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSSwitchTests.swift; sourceTree = "<group>"; };
+		F8FE2DB41FA28C54004F4E5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FE2DB61FA28C5B004F4E5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FE2DBC1FA2C8C7004F4E5C /* NSSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FE2DBE1FA2C8C7004F4E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8FE2DC01FA2C8C7004F4E5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8FE2DC21FA2C8C7004F4E5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8FE2DC51FA2C8C7004F4E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8FE2DC71FA2C8C7004F4E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FE2DC81FA2C8C7004F4E5C /* NSSwitchDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSSwitchDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +53,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A1480A1FA2809D0099271B /* Frameworks */ = {
+		F8FE2DB91FA2C8C7004F4E5C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1480E1FA2809D0099271B /* MOSwitch.framework in Frameworks */,
+				F8FE2DCF1FA2CC19004F4E5C /* NSSwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,39 +69,61 @@
 			children = (
 				F8A1481E1FA2816C0099271B /* LICENSE */,
 				F8A1481F1FA2816C0099271B /* README.md */,
-				F8A148061FA2809D0099271B /* MOSwitch */,
-				F8A148111FA2809D0099271B /* MOSwitchTests */,
+				F8A148061FA2809D0099271B /* NSSwitch */,
+				F8A148111FA2809D0099271B /* NSSwitchTests */,
+				F8FE2DBD1FA2C8C7004F4E5C /* NSSwitchDemo */,
 				F8A148051FA2809D0099271B /* Products */,
+				F8FE2DCE1FA2CC19004F4E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		F8A148051FA2809D0099271B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A148041FA2809D0099271B /* MOSwitch.framework */,
-				F8A1480D1FA2809D0099271B /* MOSwitchTests.xctest */,
+				F8A148041FA2809D0099271B /* NSSwitch.framework */,
+				F8FE2DBC1FA2C8C7004F4E5C /* NSSwitchDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8A148061FA2809D0099271B /* MOSwitch */ = {
+		F8A148061FA2809D0099271B /* NSSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				F8A148231FA281BD0099271B /* MOSwitch.swift */,
-				F8A148241FA281BD0099271B /* MOThumbView.swift */,
-				F8A148071FA2809D0099271B /* MOSwitch.h */,
-				F8A148081FA2809D0099271B /* Info.plist */,
+				F8FE2DB61FA28C5B004F4E5C /* Info.plist */,
+				F8A148231FA281BD0099271B /* NSSwitch.swift */,
+				F8A148241FA281BD0099271B /* NSSwitchThumbView.swift */,
+				F8FE2DB11FA28BFE004F4E5C /* NSSwitch.h */,
 			);
-			path = MOSwitch;
+			path = NSSwitch;
 			sourceTree = "<group>";
 		};
-		F8A148111FA2809D0099271B /* MOSwitchTests */ = {
+		F8A148111FA2809D0099271B /* NSSwitchTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8A148121FA2809D0099271B /* MOSwitchTests.swift */,
-				F8A148141FA2809D0099271B /* Info.plist */,
+				F8FE2DB41FA28C54004F4E5C /* Info.plist */,
+				F8FE2DB21FA28C26004F4E5C /* NSSwitchTests.swift */,
 			);
-			path = MOSwitchTests;
+			path = NSSwitchTests;
+			sourceTree = "<group>";
+		};
+		F8FE2DBD1FA2C8C7004F4E5C /* NSSwitchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F8FE2DBE1FA2C8C7004F4E5C /* AppDelegate.swift */,
+				F8FE2DC01FA2C8C7004F4E5C /* ViewController.swift */,
+				F8FE2DC21FA2C8C7004F4E5C /* Assets.xcassets */,
+				F8FE2DC41FA2C8C7004F4E5C /* Main.storyboard */,
+				F8FE2DC71FA2C8C7004F4E5C /* Info.plist */,
+				F8FE2DC81FA2C8C7004F4E5C /* NSSwitchDemo.entitlements */,
+			);
+			path = NSSwitchDemo;
+			sourceTree = "<group>";
+		};
+		F8FE2DCE1FA2CC19004F4E5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,16 +133,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A148151FA2809D0099271B /* MOSwitch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F8A148031FA2809D0099271B /* MOSwitch */ = {
+		F8A148031FA2809D0099271B /* NSSwitch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A148181FA2809D0099271B /* Build configuration list for PBXNativeTarget "MOSwitch" */;
+			buildConfigurationList = F8A148181FA2809D0099271B /* Build configuration list for PBXNativeTarget "NSSwitch" */;
 			buildPhases = (
 				F8A147FF1FA2809D0099271B /* Sources */,
 				F8A148001FA2809D0099271B /* Frameworks */,
@@ -123,28 +152,28 @@
 			);
 			dependencies = (
 			);
-			name = MOSwitch;
+			name = NSSwitch;
 			productName = MOSwitch;
-			productReference = F8A148041FA2809D0099271B /* MOSwitch.framework */;
+			productReference = F8A148041FA2809D0099271B /* NSSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8A1480C1FA2809D0099271B /* MOSwitchTests */ = {
+		F8FE2DBB1FA2C8C7004F4E5C /* NSSwitchDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A1481B1FA2809D0099271B /* Build configuration list for PBXNativeTarget "MOSwitchTests" */;
+			buildConfigurationList = F8FE2DCB1FA2C8C7004F4E5C /* Build configuration list for PBXNativeTarget "NSSwitchDemo" */;
 			buildPhases = (
-				F8A148091FA2809D0099271B /* Sources */,
-				F8A1480A1FA2809D0099271B /* Frameworks */,
-				F8A1480B1FA2809D0099271B /* Resources */,
+				F8FE2DB81FA2C8C7004F4E5C /* Sources */,
+				F8FE2DB91FA2C8C7004F4E5C /* Frameworks */,
+				F8FE2DBA1FA2C8C7004F4E5C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F8A148101FA2809D0099271B /* PBXTargetDependency */,
+				F8FE2DCD1FA2C8DF004F4E5C /* PBXTargetDependency */,
 			);
-			name = MOSwitchTests;
-			productName = MOSwitchTests;
-			productReference = F8A1480D1FA2809D0099271B /* MOSwitchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = NSSwitchDemo;
+			productName = NSSwitchDemo;
+			productReference = F8FE2DBC1FA2C8C7004F4E5C /* NSSwitchDemo.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -160,26 +189,27 @@
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
-					F8A1480C1FA2809D0099271B = {
+					F8FE2DBB1FA2C8C7004F4E5C = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F8A147FE1FA2809D0099271B /* Build configuration list for PBXProject "MOSwitch" */;
+			buildConfigurationList = F8A147FE1FA2809D0099271B /* Build configuration list for PBXProject "NSSwitch" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F8A147FA1FA2809D0099271B;
 			productRefGroup = F8A148051FA2809D0099271B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A148031FA2809D0099271B /* MOSwitch */,
-				F8A1480C1FA2809D0099271B /* MOSwitchTests */,
+				F8A148031FA2809D0099271B /* NSSwitch */,
+				F8FE2DBB1FA2C8C7004F4E5C /* NSSwitchDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -192,10 +222,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A1480B1FA2809D0099271B /* Resources */ = {
+		F8FE2DBA1FA2C8C7004F4E5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FE2DC31FA2C8C7004F4E5C /* Assets.xcassets in Resources */,
+				F8FE2DC61FA2C8C7004F4E5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,28 +238,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A148251FA281C50099271B /* MOSwitch.swift in Sources */,
-				F8A148261FA281C80099271B /* MOThumbView.swift in Sources */,
+				F8A148251FA281C50099271B /* NSSwitch.swift in Sources */,
+				F8A148261FA281C80099271B /* NSSwitchThumbView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A148091FA2809D0099271B /* Sources */ = {
+		F8FE2DB81FA2C8C7004F4E5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A148131FA2809D0099271B /* MOSwitchTests.swift in Sources */,
+				F8FE2DC11FA2C8C7004F4E5C /* ViewController.swift in Sources */,
+				F8FE2DBF1FA2C8C7004F4E5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F8A148101FA2809D0099271B /* PBXTargetDependency */ = {
+		F8FE2DCD1FA2C8DF004F4E5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8A148031FA2809D0099271B /* MOSwitch */;
-			targetProxy = F8A1480F1FA2809D0099271B /* PBXContainerItemProxy */;
+			target = F8A148031FA2809D0099271B /* NSSwitch */;
+			targetProxy = F8FE2DCC1FA2C8DF004F4E5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8FE2DC41FA2C8C7004F4E5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8FE2DC51FA2C8C7004F4E5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F8A148161FA2809D0099271B /* Debug */ = {
@@ -349,15 +393,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3EZ5UQTGVP;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = MOSwitch/Info.plist;
+				INFOPLIST_FILE = NSSwitch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.MOSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.NSSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -371,46 +415,48 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 3EZ5UQTGVP;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = MOSwitch/Info.plist;
+				INFOPLIST_FILE = NSSwitch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.MOSwitch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.NSSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		F8A1481C1FA2809D0099271B /* Debug */ = {
+		F8FE2DC91FA2C8C7004F4E5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NSSwitchDemo/NSSwitchDemo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3EZ5UQTGVP;
-				INFOPLIST_FILE = MOSwitchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.MOSwitchTests;
+				INFOPLIST_FILE = NSSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.NSSwitchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		F8A1481D1FA2809D0099271B /* Release */ = {
+		F8FE2DCA1FA2C8C7004F4E5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NSSwitchDemo/NSSwitchDemo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3EZ5UQTGVP;
-				INFOPLIST_FILE = MOSwitchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.MOSwitchTests;
+				INFOPLIST_FILE = NSSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haydenpennington.NSSwitchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -419,7 +465,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8A147FE1FA2809D0099271B /* Build configuration list for PBXProject "MOSwitch" */ = {
+		F8A147FE1FA2809D0099271B /* Build configuration list for PBXProject "NSSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A148161FA2809D0099271B /* Debug */,
@@ -428,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A148181FA2809D0099271B /* Build configuration list for PBXNativeTarget "MOSwitch" */ = {
+		F8A148181FA2809D0099271B /* Build configuration list for PBXNativeTarget "NSSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A148191FA2809D0099271B /* Debug */,
@@ -437,11 +483,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1481B1FA2809D0099271B /* Build configuration list for PBXNativeTarget "MOSwitchTests" */ = {
+		F8FE2DCB1FA2C8C7004F4E5C /* Build configuration list for PBXNativeTarget "NSSwitchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8A1481C1FA2809D0099271B /* Debug */,
-				F8A1481D1FA2809D0099271B /* Release */,
+				F8FE2DC91FA2C8C7004F4E5C /* Debug */,
+				F8FE2DCA1FA2C8C7004F4E5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
