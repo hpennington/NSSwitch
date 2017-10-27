@@ -33,8 +33,6 @@
 		F8A148231FA281BD0099271B /* NSSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSwitch.swift; sourceTree = "<group>"; };
 		F8A148241FA281BD0099271B /* NSSwitchThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSwitchThumbView.swift; sourceTree = "<group>"; };
 		F8FE2DB11FA28BFE004F4E5C /* NSSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSwitch.h; sourceTree = "<group>"; };
-		F8FE2DB21FA28C26004F4E5C /* NSSwitchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSSwitchTests.swift; sourceTree = "<group>"; };
-		F8FE2DB41FA28C54004F4E5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8FE2DB61FA28C5B004F4E5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8FE2DBC1FA2C8C7004F4E5C /* NSSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FE2DBE1FA2C8C7004F4E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,10 +68,8 @@
 				F8A1481E1FA2816C0099271B /* LICENSE */,
 				F8A1481F1FA2816C0099271B /* README.md */,
 				F8A148061FA2809D0099271B /* NSSwitch */,
-				F8A148111FA2809D0099271B /* NSSwitchTests */,
 				F8FE2DBD1FA2C8C7004F4E5C /* NSSwitchDemo */,
 				F8A148051FA2809D0099271B /* Products */,
-				F8FE2DCE1FA2CC19004F4E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,15 +93,6 @@
 			path = NSSwitch;
 			sourceTree = "<group>";
 		};
-		F8A148111FA2809D0099271B /* NSSwitchTests */ = {
-			isa = PBXGroup;
-			children = (
-				F8FE2DB41FA28C54004F4E5C /* Info.plist */,
-				F8FE2DB21FA28C26004F4E5C /* NSSwitchTests.swift */,
-			);
-			path = NSSwitchTests;
-			sourceTree = "<group>";
-		};
 		F8FE2DBD1FA2C8C7004F4E5C /* NSSwitchDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +104,6 @@
 				F8FE2DC81FA2C8C7004F4E5C /* NSSwitchDemo.entitlements */,
 			);
 			path = NSSwitchDemo;
-			sourceTree = "<group>";
-		};
-		F8FE2DCE1FA2CC19004F4E5C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
