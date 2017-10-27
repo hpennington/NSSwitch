@@ -72,5 +72,7 @@ class ViewController: NSViewController {
         mapView.showsCompass = false
         mapView.showsBuildings = false
         mapView.showsTraffic = false
+        
+        search(naturalLanguageQuery: "Nashville, TN")
     }
 }
