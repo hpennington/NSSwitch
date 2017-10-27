@@ -5,7 +5,7 @@
 import Cocoa
 
 @IBDesignable
-/// A UISWitch "clone" for macOS.
+/// A UISWitch clone for macOS.
 public class NSSwitch: NSControl {
     
     /// Reflects the current state of the `NSSwitch`.
@@ -35,15 +35,15 @@ public class NSSwitch: NSControl {
     public var thumbAnimationDuration = 0.20
     
     /// The `NSColor` value of the `backgroundView` when the property `on` is set to true.
-    @IBInspectable public var onColor: NSColor = NSColor(red: 19/255.0, green: 232/255.0, blue: 89/255.0, alpha: 1.0)
+    @IBInspectable public var onColor: NSColor = NSColor(red: 40/255.0, green: 150/255.0, blue: 245/255.0, alpha: 1.0)
     
     /// The `NSColor` value of the `backgroundView` when the property `on` is set to false.
-    @IBInspectable public var offColor: NSColor = NSColor(red: 203/255.0, green: 203/255.0, blue: 203/255.0, alpha: 1.0) {
+    @IBInspectable public var offColor: NSColor = NSColor(red: 114/255.0, green: 114/255.0, blue: 114/255.0, alpha: 1.0) {
         didSet { backgroundView.layer?.backgroundColor = offColor.cgColor }
     }
     
     /// The `NSColor` value of the `thumbView`.
-    @IBInspectable public var thumbColor: NSColor = NSColor(red: 226/255.0, green: 226/255.0, blue: 226/255.0, alpha: 1.0) {
+    @IBInspectable public var thumbColor: NSColor = NSColor.white {
         didSet { thumbView.layer?.backgroundColor = thumbColor.cgColor }
     }
     
@@ -70,17 +70,17 @@ public class NSSwitch: NSControl {
     }
 
     private func setup() {
-        let bgView = drawBGView()
-        self.addSubview(bgView)
-        let knobView = drawThumbKnobView()
+        drawBGView()
+        drawThumbKnobView()
         let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(NSSwitch.clicked(click:)))
         let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(NSSwitch.panned(pan:)))
         thumbView.addGestureRecognizer(panRecognizer)
-        bgView.addGestureRecognizer(clickRecognizer)
-        bgView.addSubview(knobView)
+        backgroundView.addGestureRecognizer(clickRecognizer)
+        backgroundView.addSubview(thumbView)
+        self.addSubview(backgroundView)
     }
     
-    private func drawThumbKnobView() -> NSView {
+    private func drawThumbKnobView() {
         let thumbOrigin = CGPoint(x: backgroundView.bounds.origin.x,
                                   y: backgroundView.bounds.origin.y)
         
@@ -94,10 +94,9 @@ public class NSSwitch: NSControl {
             layer.backgroundColor = thumbColor.cgColor
             layer.cornerRadius = radius
         }
-        return thumbView
     }
     
-    private func drawBGView() -> NSView {
+    private func drawBGView() {
         // Draw the backgroundView
         backgroundView = NSView(frame: self.bounds)
         backgroundView.wantsLayer = true
@@ -106,7 +105,6 @@ public class NSSwitch: NSControl {
             layer.backgroundColor = offColor.cgColor
             layer.cornerRadius = radius
         }
-        return backgroundView
     }
     
     // MARK: - NSGesture handlers.

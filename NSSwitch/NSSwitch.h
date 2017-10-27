@@ -11,5 +11,3 @@ FOUNDATION_EXPORT double NSSwitchVersionNumber;
 FOUNDATION_EXPORT const unsigned char NSSwitchVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <NSSwitch/PublicHeader.h>
-
-

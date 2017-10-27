@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -684,8 +685,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="NSSwitch" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -706,19 +707,201 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="NSSwitchDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="756" height="445"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syS-4c-QBg" customClass="NSSwitch" customModule="NSSwitch">
-                                <rect key="frame" x="207" y="167" width="32" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="bUg-rs-6Da" customClass="MKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="756" height="445"/>
                             </customView>
+                            <visualEffectView wantsLayer="YES" appearanceType="vibrantLight" blendingMode="withinWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Oc-YmS">
+                                <rect key="frame" x="0.0" y="0.0" width="247" height="445"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGa-PD-IYY">
+                                        <rect key="frame" x="20" y="271" width="207" height="104"/>
+                                        <subviews>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHF-oZ-d3o">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="104"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-g5-gjk">
+                                                        <rect key="frame" x="-2" y="84" width="61" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="BAy-Rj-caT"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Compass" id="Rgb-0c-bz1">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" white="0.0" alpha="0.60706426056338025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-fa-RiV">
+                                                        <rect key="frame" x="-2" y="56" width="43" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="svY-uN-efo"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Traffic" id="6P3-nt-mV3">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" white="0.0" alpha="0.60706426056338025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m3q-QK-MJs">
+                                                        <rect key="frame" x="-2" y="28" width="108" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="2vO-7S-nMD"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Points of Interest" id="7or-Pp-xCm">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" white="0.0" alpha="0.59897667253521136" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-9N-6OH">
+                                                        <rect key="frame" x="-2" y="0.0" width="60" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="ULi-ua-6OU"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buildings" id="4Ku-i6-Lbe">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" white="0.0" alpha="0.59897667249999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-yP-TaK">
+                                                <rect key="frame" x="155" y="0.0" width="52" height="104"/>
+                                                <subviews>
+                                                    <customView identifier="compass" translatesAutoresizingMaskIntoConstraints="NO" id="MYz-ne-twN" customClass="NSSwitch" customModule="NSSwitch">
+                                                        <rect key="frame" x="0.0" y="84" width="52" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="52" id="MFf-mG-UL6"/>
+                                                            <constraint firstAttribute="height" constant="20" id="ucT-DU-Gce"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="toggleSwitch:" target="XfG-lQ-9wD" id="fM5-bG-pGm"/>
+                                                        </connections>
+                                                    </customView>
+                                                    <customView identifier="traffic" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-66-xb5" customClass="NSSwitch" customModule="NSSwitch">
+                                                        <rect key="frame" x="0.0" y="56" width="52" height="20"/>
+                                                        <connections>
+                                                            <action selector="toggleSwitch:" target="XfG-lQ-9wD" id="6ol-cH-noO"/>
+                                                        </connections>
+                                                    </customView>
+                                                    <customView identifier="pointsOfInterest" translatesAutoresizingMaskIntoConstraints="NO" id="Gal-4a-jdT" customClass="NSSwitch" customModule="NSSwitch">
+                                                        <rect key="frame" x="0.0" y="28" width="52" height="20"/>
+                                                        <connections>
+                                                            <action selector="toggleSwitch:" target="XfG-lQ-9wD" id="dkU-i6-WPX"/>
+                                                        </connections>
+                                                    </customView>
+                                                    <customView identifier="buildings" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-ph-fgv" customClass="NSSwitch" customModule="NSSwitch">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="20"/>
+                                                        <connections>
+                                                            <action selector="toggleSwitch:" target="XfG-lQ-9wD" id="Msf-yl-lrZ"/>
+                                                        </connections>
+                                                    </customView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="a3d-ph-fgv" firstAttribute="height" secondItem="Gal-4a-jdT" secondAttribute="height" id="4ll-fs-azm"/>
+                                                    <constraint firstItem="a3d-ph-fgv" firstAttribute="width" secondItem="Gal-4a-jdT" secondAttribute="width" id="F9G-md-RhH"/>
+                                                    <constraint firstItem="Gal-4a-jdT" firstAttribute="height" secondItem="RCf-66-xb5" secondAttribute="height" id="HAa-n9-cFT"/>
+                                                    <constraint firstItem="MYz-ne-twN" firstAttribute="height" secondItem="RCf-66-xb5" secondAttribute="height" id="HbX-m5-uOp"/>
+                                                    <constraint firstItem="MYz-ne-twN" firstAttribute="width" secondItem="RCf-66-xb5" secondAttribute="width" id="QkD-Qa-OAo"/>
+                                                    <constraint firstItem="Gal-4a-jdT" firstAttribute="width" secondItem="RCf-66-xb5" secondAttribute="width" id="m7a-eM-Bxp"/>
+                                                </constraints>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="LHF-oZ-d3o" secondAttribute="trailing" constant="52" id="dNV-rp-tlv"/>
+                                        </constraints>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re7-vA-X0D">
+                                        <rect key="frame" x="20" y="395" width="207" height="22"/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsWholeSearchString="YES" id="i0D-Kh-kmt">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                        <connections>
+                                            <action selector="searchFieldChanged:" target="XfG-lQ-9wD" id="F3Q-cL-rWo"/>
+                                        </connections>
+                                    </searchField>
+                                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5WI-Dy-auF">
+                                        <rect key="frame" x="19" y="19" width="209" height="20"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="roundRect" trackingMode="selectOne" id="zB7-Uj-JpL">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <segments>
+                                                <segment label="Standard" selected="YES"/>
+                                                <segment label="Satellite" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" target="XfG-lQ-9wD" id="y1p-6a-S63"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5WI-Dy-auF" secondAttribute="trailing" constant="20" symbolic="YES" id="5oE-Vk-H9P"/>
+                                    <constraint firstItem="SGa-PD-IYY" firstAttribute="top" secondItem="re7-vA-X0D" secondAttribute="bottom" constant="20" id="942-Ea-Nc8"/>
+                                    <constraint firstAttribute="trailing" secondItem="re7-vA-X0D" secondAttribute="trailing" constant="20" symbolic="YES" id="DWh-Lx-CGh"/>
+                                    <constraint firstItem="5WI-Dy-auF" firstAttribute="leading" secondItem="IB3-Oc-YmS" secondAttribute="leading" constant="20" symbolic="YES" id="FOI-a9-jft"/>
+                                    <constraint firstItem="re7-vA-X0D" firstAttribute="top" secondItem="IB3-Oc-YmS" secondAttribute="top" constant="28" id="M9W-bx-i3O"/>
+                                    <constraint firstAttribute="bottom" secondItem="5WI-Dy-auF" secondAttribute="bottom" constant="20" symbolic="YES" id="d5I-ez-Iiu"/>
+                                    <constraint firstAttribute="trailing" secondItem="SGa-PD-IYY" secondAttribute="trailing" constant="20" symbolic="YES" id="hlT-tm-Kce"/>
+                                    <constraint firstAttribute="width" constant="247" id="lb7-gf-sx7"/>
+                                    <constraint firstItem="SGa-PD-IYY" firstAttribute="leading" secondItem="IB3-Oc-YmS" secondAttribute="leading" constant="20" symbolic="YES" id="qAD-NJ-0po"/>
+                                    <constraint firstItem="re7-vA-X0D" firstAttribute="leading" secondItem="IB3-Oc-YmS" secondAttribute="leading" constant="20" symbolic="YES" id="zbC-y5-ju9"/>
+                                </constraints>
+                            </visualEffectView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="bUg-rs-6Da" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="8PX-ai-CKC"/>
+                            <constraint firstItem="IB3-Oc-YmS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="9nf-2w-2WL"/>
+                            <constraint firstItem="bUg-rs-6Da" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="FnO-7b-0J4"/>
+                            <constraint firstAttribute="trailing" secondItem="bUg-rs-6Da" secondAttribute="trailing" id="Wf0-ay-Wl0"/>
+                            <constraint firstAttribute="bottom" secondItem="IB3-Oc-YmS" secondAttribute="bottom" id="hZx-YV-llV"/>
+                            <constraint firstItem="IB3-Oc-YmS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oor-HB-YN9"/>
+                            <constraint firstAttribute="bottom" secondItem="bUg-rs-6Da" secondAttribute="bottom" id="xlP-Ja-R7e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="bUg-rs-6Da" id="1nw-xe-lRV"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="215" y="825.5"/>
         </scene>
     </scenes>
 </document>
