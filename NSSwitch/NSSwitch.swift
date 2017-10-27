@@ -50,7 +50,7 @@ public class NSSwitch: NSControl {
     /// The background `NSView` of the `NSSwitch`.
     public var backgroundView: NSView!
     
-    /// An instance of `MOThumbView` for the Thumb component.
+    /// An instance of `NSSwitchThumbView` for the thumb knob component.
     public var thumbView: NSSwitchThumbView!
     
     public required init?(coder: NSCoder) {
@@ -70,21 +70,19 @@ public class NSSwitch: NSControl {
     }
 
     private func setup() {
-        
-        // Draw the backgroundView
-        backgroundView = NSView(frame: self.bounds)
-        backgroundView.wantsLayer = true
-
-        if let layer = backgroundView.layer {
-            layer.backgroundColor = offColor.cgColor
-            layer.cornerRadius = radius
-        }
-        
-        self.addSubview(backgroundView)
-        
-        // Draw the knobView
+        let bgView = drawBGView()
+        self.addSubview(bgView)
+        let knobView = drawThumbKnobView()
+        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(NSSwitch.clicked(click:)))
+        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(NSSwitch.panned(pan:)))
+        thumbView.addGestureRecognizer(panRecognizer)
+        bgView.addGestureRecognizer(clickRecognizer)
+        bgView.addSubview(knobView)
+    }
+    
+    private func drawThumbKnobView() -> NSView {
         let thumbOrigin = CGPoint(x: backgroundView.bounds.origin.x,
-                                 y: backgroundView.bounds.origin.y)
+                                  y: backgroundView.bounds.origin.y)
         
         let diameter = backgroundView.bounds.size.height
         let thumbSize = CGSize(width: diameter, height: diameter)
@@ -96,13 +94,19 @@ public class NSSwitch: NSControl {
             layer.backgroundColor = thumbColor.cgColor
             layer.cornerRadius = radius
         }
-                
-        let panRecognizer = NSPanGestureRecognizer(target: self, action: #selector(NSSwitch.panned(pan:)))
-        let clickRecognizer = NSClickGestureRecognizer(target: self, action: #selector(NSSwitch.clicked(click:)))
+        return thumbView
+    }
+    
+    private func drawBGView() -> NSView {
+        // Draw the backgroundView
+        backgroundView = NSView(frame: self.bounds)
+        backgroundView.wantsLayer = true
         
-        thumbView.addGestureRecognizer(panRecognizer)
-        backgroundView.addGestureRecognizer(clickRecognizer)
-        backgroundView.addSubview(thumbView)
+        if let layer = backgroundView.layer {
+            layer.backgroundColor = offColor.cgColor
+            layer.cornerRadius = radius
+        }
+        return backgroundView
     }
     
     // MARK: - NSGesture handlers.
@@ -115,16 +119,7 @@ public class NSSwitch: NSControl {
     @objc private func panned(pan: NSPanGestureRecognizer) {
         switch pan.state {
         case .changed:
-            updatePosition(pan: pan)
-            
-            let x = thumbView.frame.origin.x
-            let thumbViewWidth = thumbView.bounds.size.width
-            let backgroundViewWidth = backgroundView.bounds.size.width
-            if x + thumbViewWidth / 2 >= backgroundViewWidth / 2 {
-                setOn(on: true, animated: false)
-            } else {
-                setOn(on: false, animated: false)
-            }
+            changed(pan: pan)
             break
         case .ended:
             sendAction(self.action, to: self.target)
@@ -132,6 +127,18 @@ public class NSSwitch: NSControl {
             break
         default:
             break
+        }
+    }
+    
+    private func changed(pan: NSPanGestureRecognizer) {
+        updatePosition(pan: pan)
+        let x = thumbView.frame.origin.x
+        let thumbViewWidth = thumbView.bounds.size.width
+        let backgroundViewWidth = backgroundView.bounds.size.width
+        if x + thumbViewWidth / 2 >= backgroundViewWidth / 2 {
+            setOn(on: true, animated: false)
+        } else {
+            setOn(on: false, animated: false)
         }
     }
     

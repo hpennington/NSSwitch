@@ -1,9 +1,5 @@
 //
 //  NSSwitch.h
-//  NSSwitch
-//
-//  Created by Hayden Pennington on 10/26/17.
-//  Copyright © 2017 Hayden Pennington. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
