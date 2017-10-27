@@ -63,11 +63,11 @@ public class NSSwitch: NSControl {
         setup()
     }
     
+    private var dragVelocityGain: CGFloat = 0.3
+    
     private var radius: CGFloat {
         return self.bounds.size.height / 2
     }
-    
-    private var dragVelocityGain: CGFloat = 0.3
 
     private func setup() {
         
@@ -89,7 +89,6 @@ public class NSSwitch: NSControl {
         let diameter = backgroundView.bounds.size.height
         let thumbSize = CGSize(width: diameter, height: diameter)
         let thumbFrame = CGRect(origin: thumbOrigin, size: thumbSize)
-        
         thumbView = NSSwitchThumbView(frame: thumbFrame)
         thumbView.wantsLayer = true
         
@@ -103,11 +102,8 @@ public class NSSwitch: NSControl {
         
         thumbView.addGestureRecognizer(panRecognizer)
         backgroundView.addGestureRecognizer(clickRecognizer)
-        
         backgroundView.addSubview(thumbView)
-
     }
-    
     
     // MARK: - NSGesture handlers.
     
@@ -118,15 +114,13 @@ public class NSSwitch: NSControl {
     
     @objc private func panned(pan: NSPanGestureRecognizer) {
         switch pan.state {
-        case .began:
-            break
         case .changed:
             updatePosition(pan: pan)
             
             let x = thumbView.frame.origin.x
             let thumbViewWidth = thumbView.bounds.size.width
             let backgroundViewWidth = backgroundView.bounds.size.width
-            if x + thumbViewWidth/2 >= backgroundViewWidth/2 {
+            if x + thumbViewWidth / 2 >= backgroundViewWidth / 2 {
                 setOn(on: true, animated: false)
             } else {
                 setOn(on: false, animated: false)
@@ -160,34 +154,24 @@ public class NSSwitch: NSControl {
     }
     
     private func updatePosition(pan: NSPanGestureRecognizer) {
-        
         let thumbWidth = thumbView.bounds.size.width
-        
         let leadingSpace = thumbView.frame.origin.x
         let trailingSpace = backgroundView.bounds.size.width - (leadingSpace + thumbWidth)
-        
         let xTranslation = pan.translation(in: backgroundView).x
         
         if xTranslation >= 0 {
-            
             let delta = trailingSpace >= xTranslation ? xTranslation : trailingSpace
             thumbView.frame.origin.x += delta * dragVelocityGain
-            
-        }
-        else {
-            
+        } else {
             if leadingSpace >= -xTranslation {
                 thumbView.frame.origin.x += xTranslation * dragVelocityGain
-            }
-            else {
+            } else {
                 thumbView.frame.origin.x += -leadingSpace * dragVelocityGain
             }
-            
         }
     }
     
     private func moveToNearestSwitchPosition() {
         setOn(on: on, animated: true)
     }
-    
 }
