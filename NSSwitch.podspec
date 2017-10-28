@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NSSwitch'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'UISwitch for macOS.'
 
 # This description is used to generate tags and improve search results.

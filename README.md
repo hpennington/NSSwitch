@@ -1,24 +1,28 @@
 # NSSwitch
 
-UISwitch clone for macOS.
+UISwitch for macOS.
 
-[![CI Status](http://img.shields.io/travis/Hayden Pennington/NSSwitch.svg?style=flat)](https://travis-ci.org/Hayden Pennington/NSSwitch)
+
 [![Version](https://img.shields.io/cocoapods/v/NSSwitch.svg?style=flat)](http://cocoapods.org/pods/NSSwitch)
-[![License](https://img.shields.io/cocoapods/l/NSSwitch.svg?style=flat)](http://cocoapods.org/pods/NSSwitch)
-[![Platform](https://img.shields.io/cocoapods/p/NSSwitch.svg?style=flat)](http://cocoapods.org/pods/NSSwitch)
 
-## Image
-![](./screen_shot.png)
+![](./NSSwitch_screenshot.png)
 
-## Disclamer
-NSSwitch is in early development and is subject to change without notice.
 
 ## Installation
 
-NSSwitch is available through [CocoaPods](http://cocoapods.org). To install
+#### Carthage
+
+- Add NSSwitch dependency to the Cartfile:
+```
+	github "https://github.com/hpennington/NSSwitch.git"
+```
+
+#### CocoaPods
+
+NSSwitch is alxo available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```
 pod "NSSwitch"
 ```
 
@@ -29,3 +33,4 @@ Hayden Pennington, haydenpennington@icloud.com
 ## License
 
 NSSwitch is available under the MIT license. See the LICENSE file for more info.
+
