@@ -133,7 +133,7 @@
 			dependencies = (
 			);
 			name = NSSwitch;
-			productName = MOSwitch;
+			productName = NSSwitch;
 			productReference = F8A148041FA2809D0099271B /* NSSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
