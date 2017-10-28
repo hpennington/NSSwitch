@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.osx.deployment_target = '10.10'
 
-  s.source_files = 'NSSwitch/**/*'
+  s.source_files = 'NSSwitch/*.swift'
   
   # s.resource_bundles = {
   #   't' => ['t/Assets/*.png']
