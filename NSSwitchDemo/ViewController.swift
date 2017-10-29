@@ -45,8 +45,8 @@ class ViewController: NSViewController {
     
     func updateDisplay(mapItems: [MKMapItem]) {
         if let coord = mapItems.first?.placemark.coordinate {
-            let latDelta = 0.5
-            let lonDelta = 0.5
+            let latDelta = 0.1
+            let lonDelta = 0.1
             self.updateRegion(center: coord, latDelta: latDelta, lonDelta: lonDelta)
         }
     }
@@ -73,6 +73,6 @@ class ViewController: NSViewController {
         mapView.showsBuildings = false
         mapView.showsTraffic = false
         
-        search(naturalLanguageQuery: "Nashville, TN")
+        search(naturalLanguageQuery: "36.165847, -86.809796")
     }
 }
