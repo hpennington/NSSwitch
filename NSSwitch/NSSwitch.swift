@@ -4,10 +4,14 @@
 
 import Cocoa
 
+protocol NSSwitchDelegate {
+    func switchChanged(switch: NSSwitch)
+}
+
 @IBDesignable
 /// A UISWitch clone for macOS.
 public class NSSwitch: NSControl {
-    
+    var delegate: NSSwitchDelegate?
     /// Reflects the current state of the `NSSwitch`.
     private (set) public var on = false
     
@@ -23,8 +27,9 @@ public class NSSwitch: NSControl {
         if animated {
             animate(on: on)
         }
-        
+
         self.on = on
+        delegate?.switchChanged(switch: self)
     }
     
     /// The CAMediaTimingFunction for the switch animation.
