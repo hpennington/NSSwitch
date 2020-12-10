@@ -26,6 +26,8 @@ public class NSSwitch: NSControl {
 
         if animated {
             animate(on: on)
+        } else {
+            nonAnimate(on: on)
         }
 
         self.on = on
@@ -150,17 +152,15 @@ public class NSSwitch: NSControl {
         CATransaction.setAnimationDuration(thumbAnimationDuration)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: mediaTimingFunction))
         
-        if on {
-            let x = backgroundView.bounds.size.width - thumbView.frame.size.width
-            let destinationOrigin = CGPoint(x: x, y: 0)
-            thumbView.animator().setFrameOrigin(destinationOrigin)
-        }
-        else {
-            let destinationOrigin = CGPoint(x: 0, y: 0)
-            thumbView.animator().setFrameOrigin(destinationOrigin)
-        }
+        let destinationOrigin = self.getThumbViewPosition(isOn: on)
+        thumbView.animator().setFrameOrigin(destinationOrigin)
         
         CATransaction.commit()
+    }
+    
+    private func nonAnimate(on: Bool) {
+        let destinationOrigin = self.getThumbViewPosition(isOn: on)
+        thumbView.setFrameOrigin(destinationOrigin)
     }
     
     private func updatePosition(pan: NSPanGestureRecognizer) {
@@ -183,5 +183,19 @@ public class NSSwitch: NSControl {
     
     private func moveToNearestSwitchPosition() {
         setOn(on: on, animated: true)
+    }
+    
+    // MARK: - Helpers
+    /// get thumb view position depens on `NSSwitch` On/Off state
+    ///
+    /// - Parameter on: `NSSwitch` On/Off state. `Bool` value
+    /// - Returns: return thumb view position. `CGPoint` value
+    private func getThumbViewPosition(isOn: Bool) -> CGPoint {
+        if isOn {
+            let x = backgroundView.bounds.size.width - thumbView.frame.size.width
+            return CGPoint(x: x, y: 0)
+        } else {
+            return CGPoint(x: 0, y: 0)
+        }
     }
 }
